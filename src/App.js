@@ -13,6 +13,7 @@ const unityContext = new UnityContext({
 function App() {
   return (
     <div>
+      <h1>Gretas</h1>
       <Unity unityContext={unityContext} />;
     </div>
   );
