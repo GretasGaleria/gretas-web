@@ -1,9 +1,0 @@
-{
-  "mimeTypes": {
-    ".mem": "application/octet-stream",
-    ".memgz": "application/octet-stream",
-    ".data": "application/octet-stream",
-    ".datagz": "application/octet-stream",
-    ".jsgz": "application/x-javascript; charset=UTF-8"
-  }
-}

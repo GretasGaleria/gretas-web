@@ -4,16 +4,15 @@ import Unity, { UnityContext } from "react-unity-webgl";
 const unityContext = new UnityContext({
   productName: "Galeria Gretas",
   companyName: "Gretas",
-  loaderUrl: "Build/GretasWeb2.loader.js",
-  dataUrl: "Build/GretasWeb2.data.gz",
-  frameworkUrl: "Build/GretasWeb2.framework.js.gz",
-  codeUrl: "Build/GretasWeb2.wasm.gz",
+  loaderUrl: "buildUnity/GretasWeb2.loader.js",
+  dataUrl: "buildUnity/GretasWeb2.data",
+  frameworkUrl: "buildUnity/GretasWeb2.framework.js",
+  codeUrl: "buildUnity/GretasWeb2.wasm",
 });
 
 function App() {
   return (
     <div>
-      <h1>Gretas</h1>
       <Unity unityContext={unityContext} />;
     </div>
   );
