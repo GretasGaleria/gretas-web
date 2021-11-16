@@ -4,10 +4,10 @@ import Unity, { UnityContext } from "react-unity-webgl";
 const unityContext = new UnityContext({
   productName: "Galeria Gretas",
   companyName: "Gretas",
-  loaderUrl: "Build/gretas-build.loader.js",
-  dataUrl: "Build/gretas-build.data.br",
-  frameworkUrl: "Build/gretas-build.framework.js.br",
-  codeUrl: "Build/gretas-build.wasm.br",
+  loaderUrl: "Build/gretas-0.1.loader.js",
+  dataUrl: "Build/gretas-0.1.data",
+  frameworkUrl: "Build/gretas-0.1.framework.js",
+  codeUrl: "Build/gretas-0.1.wasm",
 });
 
 function App() {
