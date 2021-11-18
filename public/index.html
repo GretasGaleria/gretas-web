@@ -7,16 +7,16 @@
   </head>
   <body style="text-align: center">
     <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/gretas-0.2.loader.js"></script>
+    <script src="Build/gretas-0.3.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/gretas-0.2.data",
-        frameworkUrl: "Build/gretas-0.2.framework.js",
-        codeUrl: "Build/gretas-0.2.wasm",
+        dataUrl: "Build/gretas-0.3.data.br",
+        frameworkUrl: "Build/gretas-0.3.framework.js.br",
+        codeUrl: "Build/gretas-0.3.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Gretas",
         productName: "Gretas",
-        productVersion: "0.2",
+        productVersion: "0.3",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
