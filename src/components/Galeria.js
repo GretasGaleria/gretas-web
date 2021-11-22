@@ -13,6 +13,7 @@ const unityContext = new UnityContext({
 const Galeria = () => {
   return (
     <div>
+      <h1>GALERIA AQUI</h1>
       <Unity unityContext={unityContext} />;
     </div>
   );
