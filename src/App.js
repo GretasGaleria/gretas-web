@@ -1,21 +1,17 @@
 import React from "react";
-import Unity, { UnityContext } from "react-unity-webgl";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Galeria from "./components/Galeria";
 
-const unityContext = new UnityContext({
-  productName: "Galeria Gretas",
-  companyName: "Gretas",
-  loaderUrl: "Build/gretas-0.3.loader.js",
-  dataUrl: "Build/gretas-0.3.data.br",
-  frameworkUrl: "Build/gretas-0.3.framework.js.br",
-  codeUrl: "Build/gretas-0.3.wasm.br",
-});
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <Unity unityContext={unityContext} />;
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/galeria" element={<Galeria />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

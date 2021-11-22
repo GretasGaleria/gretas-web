@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Gretas</title>
-  </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/gretas-0.3.loader.js"></script>
-    <script>
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/gretas-0.3.data.br",
-        frameworkUrl: "Build/gretas-0.3.framework.js.br",
-        codeUrl: "Build/gretas-0.3.wasm.br",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Gretas",
-        productName: "Gretas",
-        productVersion: "0.3",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
-  </body>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gretas</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
 </html>
