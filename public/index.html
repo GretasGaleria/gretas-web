@@ -5,10 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gretas</title>
+    <title>GRETAS</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+        .w3-row-padding img {margin-bottom: 12px}
+        /* Set the width of the sidebar to 120px */
+        .w3-sidebar {width: 120px;background: #222;}
+        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+        #main {margin-left: 120px}
+        /* Remove margins from "page content" on small screens */
+        @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+        .overlay {
+        position: fixed; /* Sit on top of the page content */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+        }
+
+        .img-class {
+        width:80px;
+        height:80px;
+        /*cursor: pointer;*/
+        }
+    </style>
 </head>
 
-<body>
+<body class="w3-black">
     <div id="root"></div>
 </body>
 
