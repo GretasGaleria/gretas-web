@@ -17,7 +17,7 @@ const Galeria = () => {
     <div>
       <Unity
         unityContext={unityContext}
-        // style={{ width: "960px", height: "600px" }}
+        style={{ width: "960px", height: "600px" }}
       />
     </div>
   );
