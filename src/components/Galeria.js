@@ -31,7 +31,7 @@ const Galeria = () => {
         style={{
           width: "960px",
           height: "600px",
-          padding: "20px",
+          margin: "15px",
         }}
       />
     </div>
