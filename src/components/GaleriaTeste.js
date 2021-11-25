@@ -1,5 +1,5 @@
 import React from "react";
-import Unity, { UnityContext, SetFullScreen } from "react-unity-webgl";
+import Unity, { UnityContext } from "react-unity-webgl";
 
 const unityContext = new UnityContext({
   loaderUrl:
@@ -17,7 +17,7 @@ const Galeria = () => {
     <div>
       <Unity
         unityContext={unityContext}
-        style={{ width: "960px", height: "600px" }}
+        // style={{ width: "960px", height: "600px" }}
       />
     </div>
   );
