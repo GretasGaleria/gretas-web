@@ -47,7 +47,7 @@ const Galeria = () => {
         }}
       />
 
-      {!isLoaded && loadProgress.progression && (
+      {/* {!isLoaded && (
         <div
           style={{
             alignItems: "center",
@@ -56,7 +56,7 @@ const Galeria = () => {
         >
           Carregando {loadProgress.progression * 100}%
         </div>
-      )}
+      )} */}
     </div>
   );
 };
