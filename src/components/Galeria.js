@@ -24,6 +24,9 @@ const Galeria = () => {
     setIsLoaded(true);
   });
 
+  while (!isLoaded) {
+    console.log(progression);
+  }
   // function handleOnClickFullscreen() {
   //   unityContext.setFullscreen(true);
   // }
@@ -32,31 +35,31 @@ const Galeria = () => {
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         margin: "75px 0 0 0",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <div style={{ visibility: isLoaded ? "visible" : "hidden" }}>
-        <Unity
-          unityContext={unityContext}
-          style={{
-            width: "960px",
-            height: "600px",
-            margin: "15px",
-          }}
-        />
-      </div>
-
-      <div
+      <Unity
+        unityContext={unityContext}
         style={{
-          visibility: isLoaded ? "hidden" : "visible",
-          alignItems: "center",
-          justifyContent: "center",
+          width: "960px",
+          height: "600px",
+          margin: "15px",
         }}
-      >
-        Carregando {progression * 100}%
-      </div>
+      />
+
+      {!isLoaded && (
+        <div
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Carregando {progression * 100}%
+        </div>
+      )}
     </div>
   );
 };
