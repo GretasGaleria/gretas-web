@@ -13,18 +13,16 @@ const unityContext = new UnityContext({
 });
 
 const Galeria = () => {
-  const [progression, setProgression] = useState({ progression: 0 });
+  const [loadProgress, setLoadProgress] = useState({ progression: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
 
   unityContext.on("progress", (progression) => {
-    setProgression({ progression: progression });
+    setLoadProgress({ progression: progression });
   });
 
   unityContext.on("loaded", () => {
     setIsLoaded(true);
   });
-
-  console.log(progression);
 
   // function handleOnClickFullscreen() {
   //   unityContext.setFullscreen(true);
@@ -56,7 +54,7 @@ const Galeria = () => {
             justifyContent: "center",
           }}
         >
-          Carregando {progression * 100}%
+          Carregando {loadProgress.progression * 100}%
         </div>
       )}
     </div>
