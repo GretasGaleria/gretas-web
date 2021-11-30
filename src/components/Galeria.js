@@ -47,7 +47,7 @@ const Galeria = () => {
         }}
       />
 
-      {!isLoaded && (
+      {!isLoaded && loadProgress.progression && (
         <div
           style={{
             alignItems: "center",
