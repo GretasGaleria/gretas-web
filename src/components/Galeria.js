@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 
 const unityContext = new UnityContext({
@@ -13,6 +13,17 @@ const unityContext = new UnityContext({
 });
 
 const Galeria = () => {
+  const [progression, setProgression] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  unityContext.on("progress", (progression) => {
+    setProgression(progression);
+  });
+
+  unityContext.on("loaded", () => {
+    setIsLoaded(true);
+  });
+
   // function handleOnClickFullscreen() {
   //   unityContext.setFullscreen(true);
   // }
@@ -21,19 +32,34 @@ const Galeria = () => {
     <div
       style={{
         display: "flex",
+        margin: "75px 0 0 0",
         alignItems: "center",
         justifyContent: "center",
-        margin: "75px 0 0 0",
       }}
     >
-      <Unity
-        unityContext={unityContext}
-        style={{
-          width: "960px",
-          height: "600px",
-          margin: "15px",
-        }}
-      />
+      {isLoaded ? (
+        <Unity
+          unityContext={unityContext}
+          style={{
+            width: "960px",
+            height: "600px",
+            margin: "15px",
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            width: "960px",
+            height: "600px",
+            margin: "15px",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Carregando {progression * 100}%
+        </div>
+      )}
     </div>
   );
 };
