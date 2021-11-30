@@ -37,7 +37,7 @@ const Galeria = () => {
         justifyContent: "center",
       }}
     >
-      {isLoaded ? (
+      <div style={{ visibility: isLoaded ? "visible" : "hidden" }}>
         <Unity
           unityContext={unityContext}
           style={{
@@ -46,20 +46,17 @@ const Galeria = () => {
             margin: "15px",
           }}
         />
-      ) : (
-        <div
-          style={{
-            display: "flex",
-            width: "960px",
-            height: "600px",
-            margin: "15px",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Carregando {progression * 100}%
-        </div>
-      )}
+      </div>
+
+      <div
+        style={{
+          visibility: isLoaded ? "hidden" : "visible",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        Carregando {progression * 100}%
+      </div>
     </div>
   );
 };
