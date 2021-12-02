@@ -38,17 +38,6 @@ const GaleriaTeste = () => {
           margin: "15px",
         }}
       />
-
-      {/* {!isLoaded && (
-        <div
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Carregando {loadProgress.progression * 100}%
-        </div>
-      )} */}
     </div>
   );
 };
