@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index_bundle.js",
+    filename: "bundle.js",
     publicPath: "/",
   },
   devtool: "source-map",
@@ -23,7 +23,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".html", ".jsx"],
   },
   devServer: {
     historyApiFallback: true,
