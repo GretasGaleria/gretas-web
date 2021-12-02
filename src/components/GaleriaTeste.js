@@ -1,28 +1,24 @@
 import React, { useState } from "react";
-import Unity, { UnityContext } from "react-unity-webgl";
+import Unity, { UnityContent } from "react-unity-webgl";
 
-const unityContext = new UnityContext({
-  loaderUrl: "../../public/build/gretasgaleria.loader.js",
-  dataUrl: "../../public/build/gretasgaleria.data.br",
-  frameworkUrl: "../../public/build/gretasgaleria.framework.js.br",
-  codeUrl: "../../public/build/gretasgaleria.wasm.br",
+const unityContent = new UnityContent({
+  loaderUrl: "build/gretasgaleria.loader.js",
+  dataUrl: "build/gretasgaleria.data.br",
+  frameworkUrl: "build/gretasgaleria.framework.js.br",
+  codeUrl: "build/gretasgaleria.wasm.br",
 });
 
 const GaleriaTeste = () => {
   const [loadProgress, setLoadProgress] = useState({ progression: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
 
-  unityContext.on("progress", (progression) => {
+  unityContent.on("progress", (progression) => {
     setLoadProgress({ progression: progression });
   });
 
-  unityContext.on("loaded", () => {
+  unityContent.on("loaded", () => {
     setIsLoaded(true);
   });
-
-  // function handleOnClickFullscreen() {
-  //   unityContext.setFullscreen(true);
-  // }
 
   return (
     <div
@@ -35,7 +31,7 @@ const GaleriaTeste = () => {
       }}
     >
       <Unity
-        unityContext={unityContext}
+        unityContent={unityContent}
         style={{
           width: "960px",
           height: "600px",
