@@ -23,7 +23,7 @@ const Galeria = () => {
   unityContext.on("loaded", () => {
     setIsLoaded(true);
   });
-  loadProgress.progression < 1 && console.log(loadProgress.progression);
+
   // function handleOnClickFullscreen() {
   //   unityContext.setFullscreen(true);
   // }
@@ -47,16 +47,17 @@ const Galeria = () => {
         }}
       />
 
-      {/* {!isLoaded && (
+      {!isLoaded && (
         <div
           style={{
+            position: "absolute",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
           Carregando {loadProgress.progression * 100}%
         </div>
-      )} */}
+      )}
     </div>
   );
 };
