@@ -2,10 +2,10 @@ import React from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 
 const unityContext = new UnityContext({
-  loaderUrl: "../public/gretasgaleria.loader.js",
-  dataUrl: "../public/gretasgaleria.data.gz",
-  frameworkUrl: "../public/gretasgaleria.framework.js.gz",
-  codeUrl: "../public/gretasgaleria.wasm.gz",
+  loaderUrl: "gretasgaleria.loader.js",
+  dataUrl: "gretasgaleria.data.gz",
+  frameworkUrl: "gretasgaleria.framework.js.gz",
+  codeUrl: "gretasgaleria.wasm.gz",
 });
 
 const GaleriaTeste = () => {
