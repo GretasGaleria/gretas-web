@@ -64,7 +64,7 @@ const Galeria = () => {
           >
             <div
               style={{
-                width: `${loadProgress.progression * 300}px"`,
+                width: loadProgress.progression * 300,
                 height: "20px",
                 backgroundColor: "white",
               }}
