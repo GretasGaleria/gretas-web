@@ -5,11 +5,11 @@ const unityContext = new UnityContext({
   loaderUrl:
     "https://gretasgaleria.blob.core.windows.net/data/build/gretasgaleria.loader.js",
   dataUrl:
-    "https://gretasgaleria.blob.core.windows.net/data/build/gretasgaleria.data.br",
+    "https://gretasgaleria.blob.core.windows.net/data/build/gzip/gretasgaleria.data.gz",
   frameworkUrl:
-    "https://gretasgaleria.blob.core.windows.net/data/build/gretasgaleria.framework.js.br",
+    "https://gretasgaleria.blob.core.windows.net/data/build/gzip/gretasgaleria.framework.js.gz",
   codeUrl:
-    "https://gretasgaleria.blob.core.windows.net/data/build/gretasgaleria.wasm.br",
+    "https://gretasgaleria.blob.core.windows.net/data/build/gzip/gretasgaleria.wasm.gz",
 });
 
 const Galeria = () => {
