@@ -55,7 +55,30 @@ const Galeria = () => {
             justifyContent: "center",
           }}
         >
-          Carregando {loadProgress.progression * 100}%
+          <div
+            style={{
+              width: "300px",
+              height: "20px",
+              outline: "2px solid white",
+            }}
+          >
+            <div
+              style={{
+                width: `${loadProgress.progression * 300}px"`,
+                height: "20px",
+                backgroundColor: "white",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "8px",
+            }}
+          >
+            Carregando...
+          </div>
         </div>
       )}
     </div>
