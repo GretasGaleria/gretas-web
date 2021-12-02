@@ -1,22 +1,22 @@
 import React, { useState } from "react";
-import Unity, { UnityContent } from "react-unity-webgl";
+import Unity, { UnityContext } from "react-unity-webgl";
 
-const unityContent = new UnityContent({
+const unityContext = new UnityContext({
   loaderUrl: "build/gretasgaleria.loader.js",
   dataUrl: "build/gretasgaleria.data.br",
   frameworkUrl: "build/gretasgaleria.framework.js.br",
   codeUrl: "build/gretasgaleria.wasm.br",
 });
 
-const GaleriaTeste = () => {
-  const [loadProgress, setLoadProgress] = useState({ progression: 0 });
-  const [isLoaded, setIsLoaded] = useState(false);
+const GaleriaTeste = (): JSX.Element => {
+  const [loadProgress, setLoadProgress] = useState<object>({ progression: 0 });
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
-  unityContent.on("progress", (progression) => {
+  unityContext.on("progress", (progression: number) => {
     setLoadProgress({ progression: progression });
   });
 
-  unityContent.on("loaded", () => {
+  unityContext.on("loaded", () => {
     setIsLoaded(true);
   });
 
@@ -31,7 +31,7 @@ const GaleriaTeste = () => {
       }}
     >
       <Unity
-        unityContent={unityContent}
+        unityContext={unityContext}
         style={{
           width: "960px",
           height: "600px",

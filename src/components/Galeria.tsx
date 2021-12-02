@@ -12,11 +12,11 @@ const unityContext = new UnityContext({
     "https://gretasgaleria.blob.core.windows.net/data/build/gretasgaleria.wasm.br",
 });
 
-const Galeria = () => {
-  const [loadProgress, setLoadProgress] = useState({ progression: 0 });
-  const [isLoaded, setIsLoaded] = useState(false);
+const Galeria = (): JSX.Element => {
+  const [loadProgress, setLoadProgress] = useState<object>({ progression: 0 });
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
-  unityContext.on("progress", (progression) => {
+  unityContext.on("progress", (progression: number) => {
     setLoadProgress({ progression: progression });
   });
 
