@@ -1,7 +1,7 @@
 {
   "routes": [
     {
-      "route": "/build/*",
+      "route": "/build/*.{data,js,wasm}",
       "headers": {
         "Content-Encoding": "gzip"
       }
