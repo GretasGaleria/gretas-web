@@ -1,9 +1,27 @@
 {
   "routes": [
     {
-      "route": "/build/*.{data,js,wasm}",
+      "route": "/build/*",
       "headers": {
         "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "/build/*.js",
+      "headers": {
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "route": "/build/*.data",
+      "headers": {
+        "Content-Type": "application/octet-stream"
+      }
+    },
+    {
+      "route": "/build/*.wasm",
+      "headers": {
+        "Content-Type": "application/wasm"
       }
     }
   ],
