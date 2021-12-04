@@ -31,6 +31,20 @@
       }
     }
   ],
+  "mimeTypes": {
+    ".data": "application/octet-stream",
+    ".wasm": "application/wasm",
+    ".js": "application/javascript",
+    ".symbols.json": "application/octet-stream",
+    ".data.gz": "application/octet-stream",
+    ".wasm.gz": "application/wasm",
+    ".js.gz": "application/javascript",
+    ".symbols.json.gz": "application/octet-stream",
+    ".data.br": "application/octet-stream",
+    ".wasm.br": "application/wasm",
+    ".js.br": "application/javascript",
+    ".symbols.json.br": "application/octet-stream"
+  },
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
