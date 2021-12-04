@@ -7,19 +7,25 @@
       }
     },
     {
-      "route": "/build/*.js",
+      "route": "/build/*.br",
+      "headers": {
+        "Content-Encoding": "br"
+      }
+    },
+    {
+      "route": "/build/*.{js,js.gz,js.br}",
       "headers": {
         "Content-Type": "application/javascript"
       }
     },
     {
-      "route": "/build/*.data",
+      "route": "/build/*.{data,data.gz,data.br}",
       "headers": {
         "Content-Type": "application/octet-stream"
       }
     },
     {
-      "route": "/build/*.wasm",
+      "route": "/build/*.{wasm,wasm.gz,wasm.br}",
       "headers": {
         "Content-Type": "application/wasm"
       }
